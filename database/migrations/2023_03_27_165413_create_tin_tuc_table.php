@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('tieu_de');
             $table->string('anh');
             $table->string('mo_ta');
-            $table->string('loai_tin_tuc');
+            $table->string('id_loai_tin_tuc');
             $table->bigInteger('id_users');
             $table->timestamps();
         });
