@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\PostsController;
+use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +18,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+Route::controller(PostsController::class)->group(function () {
+    Route::get('/posts','index');
+    Route::get('/adminPosts','admin');
+});
+Route::controller(NewsController::class)->group(function () {
+    Route::get('/news','index');
 });

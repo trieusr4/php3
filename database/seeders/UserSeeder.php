@@ -15,11 +15,11 @@ class UserSeeder extends Seeder
     {
         for ($i=0;$i<5;$i++){
             DB::table('users')->insert([
-                'ten'=>"Meow",
-                'sdt'=>'0987654321',
-                'mat_khau'=>bcrypt('123456'),
-                'dia_chi'=>"ha nam",
-                'email'=>'trieuthph18663'.$i,
+                'name'=>"Meow",
+                'email'=>"trieu@gmail.com",
+                'password'=>bcrypt('123456'),
+                'phone'=>'0987654321',
+                'status'=>"dang haon thanh",
                 'role'=>1,
             ]);
     }
