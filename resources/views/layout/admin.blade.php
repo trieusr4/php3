@@ -153,7 +153,7 @@
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="/img/no-avartar.png" class="user-image" alt="User Image">
-                            <span class="hidden-xs"> Tran Trieu </span>
+                            {{-- <span class="hidden-xs"> {{$objUser->user_name}} </span> --}}
                         </a>
                         <ul class="dropdown-menu">
                             <li>
@@ -186,11 +186,11 @@
                     <img src="/img/no-avartar.png" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p> fgg</p>
+                    <p>  </p>
 
                 </div>
                 <div class="clearfix">
-                    <p class="text-info">gmailsafdaf</p>
+                    <p class="text-info"></p>
                 </div>
 
             </div>

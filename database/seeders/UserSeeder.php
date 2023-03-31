@@ -18,8 +18,6 @@ class UserSeeder extends Seeder
                 'name'=>"Meow",
                 'email'=>"trieu@gmail.com",
                 'password'=>bcrypt('123456'),
-                'phone'=>'0987654321',
-                'status'=>"dang haon thanh",
                 'role'=>1,
             ]);
     }

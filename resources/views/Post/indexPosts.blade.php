@@ -586,7 +586,7 @@
                             <img src="https://picsum.photos/200/200" alt="">
                         </a>
                         <div class="p-3">
-                            <h2 class="fw-600">{{$item->ten_du_an}}</h2> 
+                            <h2 class="fw-600">{{$item->investors}}</h2> 
                             <div class="row start-xs middle-xs ratings" title="15">      
                                 <i class="material-icons mat-icon-sm">star</i>
                                 <i class="material-icons mat-icon-sm">star</i>
@@ -596,13 +596,9 @@
                             </div>    
                             <p class="row middle-xs"><span class="mx-2 text-muted fw-500">Chủ đầu tư: {{$item->chu_dau_tu}}</span></p>
                             <p class="row middle-xs"><span class="mx-2 text-muted fw-500">Trạng thái dự án:{{$item->trang_thai_du_an}}</span></p>
-                            <p class="row middle-xs"><span class="mx-2 text-muted fw-500">Địa chỉ:{{$item->dia_chi}}</span></p>
-                            <p class="row middle-xs"><span class="mx-2 text-muted fw-500">Thông Tin:{{$item->thong_tin}} </span></p>
-                            <p class="row middle-xs"><span class="mx-2 text-muted fw-500">Mặt Tiền:{{$item->mat_tien}} </span></p>
-                            <p class="row middle-xs"><span class="mx-2 text-muted fw-500">Số phòng ngủ:{{$item->so_phong_ngu}} </span></p>
-                            <p class="row middle-xs"><span class="mx-2 text-muted fw-500">Số tầng:{{$item->so_tang}} </span></p><p class="row middle-xs"><span class="mx-2 text-muted fw-500">Thông Tin:{{$item->thong_tin}} </span></p>
-                            <p class="row middle-xs"><span class="mx-2 text-muted fw-500">Nội thất:{{$item->noi_that}} </span></p>
-
+                            <p class="row middle-xs"><span class="mx-2 text-muted fw-500">Địa chỉ:{{$item->address}}</span></p>
+                            <p class="row middle-xs"><span class="mx-2 text-muted fw-500">Mô tả:{{$item->des}} </span></p>
+                            <p class="row middle-xs"><span class="mx-2 text-muted fw-500">Trạng thái:{{$item->status}} </span></p>
                              <div class="row pb-3 p-relative">
                                 <div class="divider"></div>
                             </div> 
@@ -646,8 +642,6 @@
         </div>  
        
     </div> 
-
-
     @yield('content1')
     {{-- @yield('name') --}}
     <footer>

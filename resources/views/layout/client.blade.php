@@ -258,7 +258,7 @@
                     {{-- @foreach ($list as $items) --}}
                                
                     <div class="mdc-menu-surface--anchor">
-                        {{-- <a href="{{route('route_BackEnd_project_font_Project_font')}}" class="mdc-button menu-item-has-children"> --}}
+                        <a href="" class="mdc-button menu-item-has-children">
                             <span class="mdc-button__ripple"></span>
                             <span class="mdc-button__label">Dự án</span>
                         </a>
@@ -300,45 +300,45 @@
                     </div>
                     {{-- @endforeach   --}}
                     <div class="mdc-menu-surface--anchor">
-                        {{-- <a href="{{route('route_BackEnd_project_font_Project_font')}}" class="mdc-button menu-item-has-children"> --}}
+                        <a href="" class="mdc-button menu-item-has-children">
                             <span class="mdc-button__ripple"></span>
                             <span class="mdc-button__label">Nhà cho thuê</span>
                         </a>
                         <div class="mdc-menu mdc-menu-surface">
                             <div class="mdc-list">
                                 <div>
-                                    {{-- <a href="{{route('route_BackEnd_project_font_Project_font')}}" class="mdc-button"> --}}
+                                    <a href="" class="mdc-button">
                                         <span class="mdc-button__ripple"></span>
                                         <span class="mdc-button__label">căn hộ chung cư</span>
                                     </a>
                                 </div>
                                 <div>
-                                    {{-- <a href="{{route('route_BackEnd_project_font_Project_font')}}" class="mdc-button"> --}}
+                                    <a href="" class="mdc-button">
                                         <span class="mdc-button__ripple"></span>
                                         <span class="mdc-button__label">phòng trọ</span>
                                     </a>
                                 </div>
                                 
                                 <div>
-                                    {{-- <a href="{{route('route_BackEnd_project_font_Project_font')}}" class="mdc-button"> --}}
+                                    <a href="" class="mdc-button">
                                         <span class="mdc-button__ripple"></span>
                                         <span class="mdc-button__label">biệt thự</span>
                                     </a>
                                 </div>
                                 <div>
-                                    {{-- <a href="{{route('route_BackEnd_project_font_Project_font')}}" class="mdc-button"> --}}
+                                    <a href="" class="mdc-button">
                                         <span class="mdc-button__ripple"></span>
                                         <span class="mdc-button__label">nhà riêng</span>
                                     </a>
                                 </div>
                                 <div>
-                                    {{-- <a href="{{route('route_BackEnd_project_font_Project_font')}}" class="mdc-button"> --}}
+                                    <a href="" class="mdc-button">
                                         <span class="mdc-button__ripple"></span>
                                         <span class="mdc-button__label">văn phòng</span>
                                     </a>
                                 </div>
                                 <div>
-                                    {{-- <a href="{{route('route_BackEnd_project_font_Project_font')}}" class="mdc-button"> --}}
+                                    <a href="" class="mdc-button">
                                         <span class="mdc-button__ripple"></span>
                                         <span class="mdc-button__label">làm xưởng</span>
                                     </a>
@@ -348,14 +348,14 @@
                         </div>
                     </div>
                     <div class="mdc-menu-surface--anchor">
-                        {{-- <a href="{{route('route_BackEnd_news_font_News_font')}}" class="mdc-button menu-item-has-children"> --}}
+                        <a href="" class="mdc-button menu-item-has-children">
                             <span class="mdc-button__ripple"></span>
                             <span class="mdc-button__label">Tin tức</span>
                         </a>
                         <div class="mdc-menu mdc-menu-surface">
                             <div class="mdc-list">
                                 <div>
-                                    {{-- <a href="{{route('route_BackEnd_news_font_News_font')}}" class="mdc-button"> --}}
+                                    <a href="" class="mdc-button">
                                         <span class="mdc-button__ripple"></span>
                                         <span class="mdc-button__label">Bất động sản HCm</span>
                                     </a>
@@ -388,7 +388,7 @@
                                 
                             </div>
                         </div>
-                        {{-- <a href="{{route('route_BackEnd_contact_font_Contact_font')}}" class="mdc-button menu-item-has-children"> --}}
+                        <a href="" class="mdc-button menu-item-has-children">
                             <span class="mdc-button__ripple"></span>
                             <span class="">Liên Hệ</span>
                         </a>

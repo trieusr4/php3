@@ -8,9 +8,6 @@ use Illuminate\Support\Facades\DB;
 
 class PostSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         for ($i=0;$i<5;$i++){

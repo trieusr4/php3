@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class NewsModel extends Model
+class Product extends Model
 {
     use HasFactory;
-    protected $table = 'tin_tuc';
+    protected $fillable = ['name', 'price'];
 }

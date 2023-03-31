@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class PostsModel extends Model
 {
     use HasFactory;
-    protected $table = 'du_an';
+    protected $table = 'posts';
 }
