@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +28,24 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::group(['namespace' => 'Categories', 'prefix' => 'categories'], function () {
+        Route::get('/', [CategoryController::class, 'index']);
+        Route::get('/create', [CategoryController::class, 'create']);
+        Route::post('/add', [CategoryController::class, 'store']);
+        Route::get('/{id}/edit', [CategoryController::class, 'edit']);
+        Route::put('/{id}/update', [CategoryController::class, 'update']);
+        Route::delete('/{id}/delete', [CategoryController::class, 'destroy']);
+    });
+    Route::group(['namespace' => 'Users', 'prefix' => 'users'], function () {
+        Route::get('/', [UserController::class, 'index']);
+        Route::get('/create', [UserController::class, 'create']);
+        Route::post('/add', [UserController::class, 'store']);
+        Route::get('/{id}/edit', [UserController::class, 'edit']);
+        Route::put('/{id}/update', [UserController::class, 'update']);
+        Route::delete('/{id}/delete', [UserController::class, 'destroy']);
+    });
 });
 
-require __DIR__.'/auth.php';
+
+
+require __DIR__ . '/auth.php';
