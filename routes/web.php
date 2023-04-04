@@ -44,6 +44,14 @@ Route::middleware('auth')->group(function () {
         Route::put('/{id}/update', [UserController::class, 'update']);
         Route::delete('/{id}/delete', [UserController::class, 'destroy']);
     });
+    Route::group(['namespace' => 'Post', 'prefix' => 'post'], function () {
+        Route::get('/', [PostController::class, 'index']);
+        Route::get('/create', [PostController::class, 'create']);
+        Route::post('/add', [PostController::class, 'store']);
+        Route::get('/{id}/edit', [PostController::class, 'edit']);
+        Route::put('/{id}/update', [PostController::class, 'update']);
+        Route::delete('/{id}/delete', [PostController::class, 'destroy']);
+    });
 });
 
 

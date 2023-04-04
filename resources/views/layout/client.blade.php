@@ -236,7 +236,13 @@
                                 <li>
                                     <a href="login.html" class="mdc-list-item" role="menuitem">
                                         <i class="material-icons mat-icon-sm text-muted">power_settings_new</i>
-                                        <span class="mdc-list-item__text px-3">Sign Out</span>
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+                                
+                                            <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                                {{ __('Log Out') }}
+                                            </button>
+                                        </form>
                                     </a>
                                 </li>
                             </ul>

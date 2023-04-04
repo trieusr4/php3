@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bất Động Sản::@yield('title')</title>
+    <title>Bất Động Sản::</title>
 
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -110,10 +110,6 @@
     {{--<script type="text/javascript" src="/public/js/app.js?b={{config('app.build_version')}}"></script>--}}
     <script src="{{ asset('default/bower_components/jquery/dist/jquery.min.js')}}"></script>
     {{--<script src="{{ taisan('/public/default/dist/js/spx.js')}}"></script>--}}
-
-    <script>
-        var sapp = new Object();
-    </script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini fixed">
 <script>
@@ -153,19 +149,26 @@
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="/img/no-avartar.png" class="user-image" alt="User Image">
-                            {{-- <span class="hidden-xs"> {{$objUser->user_name}} </span> --}}
+                            <span class="hidden-xs">  </span>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
                                 <p style="padding: 10px;">
-                                    <i class="fa fa-user"></i> Email: <br>
+                                    <i class="fa fa-user"></i> Email:<br>
 
                                 </p>
                             </li>
                             <li class="user-footer">
                                 <div class="pull-right">
-                                    <a href="" class="btn btn-default btn-flat">Sign out</a>
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                            
+                                        <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                            {{ __('Log Out') }}
+                                        </button>
+                                    </form>
                                 </div>
+                                
                             </li>
                         </ul>
                     </li>
@@ -186,58 +189,41 @@
                     <img src="/img/no-avartar.png" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>  </p>
+                  
 
                 </div>
                 <div class="clearfix">
-                    <p class="text-info"></p>
+                   
                 </div>
 
             </div>
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class=" active menu-open ">
-                    <a href=""><i class="fa fa-user"></i> <span>Người Dùng</span></a>
-                    <ul class="treeview-menu">
-                        <li><a href=""><i
-                                    class="fa fa-circle-o"></i>Thêm Người Dùng</a></li>
-                    </ul>
+                    <a href="/users"><i class="fa fa-user"></i> <span>User</span></a>
                 </li>
             </ul>
             <ul class="sidebar-menu" data-widget="tree">
                 <li class=" active menu-open ">
-                    <a href=""><i class="fa fa-user"></i> <span>Danh Mục</span></a>
-                    <ul class="treeview-menu">
-                        <li><a href=""><i
-                                    class="fa fa-circle-o"></i>Thêm Danh Mục</a></li>
-                    </ul>
+                    <a href="/categories"><i class="fa fa-user"></i> <span>Categories</span></a>
                 </li>
             </ul>
             <ul class="sidebar-menu" data-widget="tree">
                 <li class=" active menu-open ">
                     <a href=""><i class="fa fa-user"></i> <span>Tin Tức</span></a>
-                    <ul class="treeview-menu">
-                        <li><a href=""><i
-                                    class="fa fa-circle-o"></i>Thêm Tin Tức</a></li>
-                    </ul>
+                   
                 </li>
             </ul>
             <ul class="sidebar-menu" data-widget="tree">
                 <li class=" active menu-open ">
                     <a href=""><i class="fa fa-user"></i> <span>Dự Án</span></a>
-                    <ul class="treeview-menu">
-                        <li><a href=""><i
-                                    class="fa fa-circle-o"></i>Thêm Dự Án</a></li>
-                    </ul>
+                   
                 </li>
             </ul>
             <ul class="sidebar-menu" data-widget="tree">
                 <li class=" active menu-open ">
                     <a href=""><i class="fa fa-user"></i> <span>Banner</span></a>
-                    <ul class="treeview-menu">
-                        <li><a href=""><i
-                                    class="fa fa-circle-o"></i>Thêm Banner</a></li>
-                    </ul>
+                   
                 </li>
             </ul>
         </section>
