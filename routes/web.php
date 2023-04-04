@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -51,6 +52,14 @@ Route::middleware('auth')->group(function () {
         Route::get('/{id}/edit', [PostController::class, 'edit']);
         Route::put('/{id}/update', [PostController::class, 'update']);
         Route::delete('/{id}/delete', [PostController::class, 'destroy']);
+    });
+    Route::group(['namespace' => 'Products', 'prefix' => 'products'], function () {
+        Route::get('/', [ProductsController::class, 'index']);
+        Route::get('/create', [ProductsController::class, 'create']);
+        Route::post('/add', [ProductsController::class, 'store']);
+        Route::get('/{id}/edit', [ProductsController::class, 'edit']);
+        Route::put('/{id}/update', [ProductsController::class, 'update']);
+        Route::delete('/{id}/delete', [ProductsController::class, 'destroy']);
     });
 });
 

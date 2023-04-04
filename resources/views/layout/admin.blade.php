@@ -216,7 +216,7 @@
             </ul>
             <ul class="sidebar-menu" data-widget="tree">
                 <li class=" active menu-open ">
-                    <a href=""><i class="fa fa-user"></i> <span>Dự Án</span></a>
+                    <a href="/products"><i class="fa fa-user"></i> <span>Dự Án</span></a>
                    
                 </li>
             </ul>
