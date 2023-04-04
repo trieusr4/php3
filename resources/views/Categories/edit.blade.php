@@ -8,7 +8,7 @@
             <label for="">Tên:</label>
             <input type="text" name="name" value="{{ $category->name }}" class="form-control">
             <br>
-            <input type="submit" value="Thêm mới" class="btn btn-success">
+            <input type="submit" value="Cập nhật" class="btn btn-success">
         </form>
     </div>
 </div>

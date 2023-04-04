@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <form action="/products/add" method="post">
+        <form action="/products/add" method="post" enctype="multipart/form-data">
             @csrf
             <label for="">Tiêu đề:</label>
             <input type="text" name="title" class="form-control">

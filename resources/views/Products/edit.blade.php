@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <form action="/products/{{ $product->id }}/update" method="post">
+        <form action="/products/{{ $product->id }}/update" method="post" enctype="multipart/form-data">
             @csrf
             @Method('PUT')
             <label for="">Tiêu đề:</label>
@@ -32,7 +32,7 @@
                 <option {{ ($product -> status == '2' ? "selected":"") }} value="2">Đã bán</option>
               </select>
             <br>
-            <input type="submit" value="Thêm mới" class="btn btn-success">
+            <input type="submit" value="Cập nhật" class="btn btn-success">
         </form>
     </div>
 </div>

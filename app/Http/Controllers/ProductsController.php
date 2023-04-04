@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\ProductsModel;
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
@@ -29,16 +30,13 @@ class ProductsController extends Controller
             'acreage' => ['required'],
             'bedroom' => ['required', 'integer'],
             'status' => ['required', 'string'],
-            'image' => ["required"]
+            'image' => ['required', 'image', 'max:2048']
         ]);
         $input = $request->all();
         $id = \Auth::id();
         $product = new ProductsModel;
-        if ($image = $request->file('image')) {
-            $destinationPath = 'public/image';
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $profileImage);
-            $input['image'] = "$profileImage";
+        if ($request->file('image')) {
+            $input['image'] = Cloudinary::upload($request->file('image')->getRealPath())->getSecurePath();
         }
         $product->title = $input['title'];
         $product->name = $input['name'];
@@ -69,16 +67,13 @@ class ProductsController extends Controller
             'acreage' => ['required'],
             'bedroom' => ['required', 'integer'],
             'status' => ['required', 'string'],
-            'image' => ["required"]
+            'image' => ['required', 'image', 'max:2048']
         ]);
         $product = ProductsModel::find($id);
         $input = $request->all();
         $id = \Auth::id();
-        if ($image = $request->file('image')) {
-            $destinationPath = 'public/image';
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $profileImage);
-            $input['image'] = "$profileImage";
+        if ($request->file('image')) {
+            $input['image'] = Cloudinary::upload($request->file('image')->getRealPath())->getSecurePath();
         }
         $product->title = $input['title'];
         $product->name = $input['name'];
