@@ -793,13 +793,13 @@
                                     </div>
                                     <div class="grow"></div>
                                     <div class="actions row between-xs middle-xs">
-                                        <p class="row date mb-0">
+                                        {{-- <p class="row date mb-0">
                                             <i class="material-icons text-muted">date_range</i>
                                             <span class="mx-2">12 August, 2012</span>
-                                        </p>
-                                        <a href="javascript:void(0);" class="mdc-button mdc-button--outlined">
+                                        </p> --}}
+                                        <a href="home/product-detail/{{ $item->id }}" class="mdc-button mdc-button--outlined">
                                             <span class="mdc-button__ripple"></span>
-                                            <span class="mdc-button__label">Details</span>
+                                            <span  class="mdc-button__label">Chi tiết</span>
                                         </a>
                                     </div>
                                 </div>

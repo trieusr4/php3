@@ -58,6 +58,11 @@ class ProductsController extends Controller
         return view("Products.edit", compact('product'));
     }
 
+    public function detailHome($id)
+    {
+        $product = ProductsModel::find($id);
+        return view("Home.product-detail", compact('product'));
+    }
     public function update(Request $request, $id): RedirectResponse
     {
         $request->validate([
