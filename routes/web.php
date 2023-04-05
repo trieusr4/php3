@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
@@ -60,6 +61,14 @@ Route::middleware('auth')->group(function () {
         Route::get('/{id}/edit', [ProductsController::class, 'edit']);
         Route::put('/{id}/update', [ProductsController::class, 'update']);
         Route::delete('/{id}/delete', [ProductsController::class, 'destroy']);
+    });
+    Route::group(['namespace' => 'News', 'prefix' => 'news'], function () {
+        Route::get('/', [NewsController::class, 'index']);
+        Route::get('/create', [NewsController::class, 'create']);
+        Route::post('/add', [NewsController::class, 'store']);
+        Route::get('/{id}/edit', [NewsController::class, 'edit']);
+        Route::put('/{id}/update', [NewsController::class, 'update']);
+        Route::delete('/{id}/delete', [NewsController::class, 'destroy']);
     });
 });
 
