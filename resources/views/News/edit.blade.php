@@ -1,39 +1,20 @@
 @extends('layout.admin')
-@section('admin')
-<div class="container-fluid">
-    <!-- DataTales Example -->
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Category</h6>
-        </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
-                        </tr>
-                    </tfoot>
-                    
-                </table>
-            </div>
+@section('content')
+    <div class="container">
+        <div class="row">
+            <form action="/news/add" method="post" enctype="multipart/form-data">
+                @csrf
+                <label for="">Tiêu đề:</label>
+                <input value="{{$new -> title}}" type="text" name="title" class="form-control">
+                <br>
+                <label for="">Ảnh:</label>
+                <input type="file" class="form-control" name="image" />
+                <br>
+                <label for="">Mô tả:</label>
+                <input value="{{$new -> des}}" type="text" name="description" class="form-control">
+                <br>
+                <input type="submit" value="Thêm mới" class="btn btn-success">
+            </form>
         </div>
     </div>
-
-</div>
 @endsection

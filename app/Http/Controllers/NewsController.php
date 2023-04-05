@@ -24,66 +24,46 @@ class NewsController extends Controller
     {
         $request->validate([
             'title' => ['required', 'string', 'max:255'],
-            'name' => ['required', 'string', 'max:255'],
-            'price' => ['required'],
-            'acreage' => ['required'],
-            'bedroom' => ['required', 'integer'],
-            'status' => ['required', 'string'],
             'image' => ['required', 'image', 'max:2048']
         ]);
         $input = $request->all();
         $id = \Auth::id();
-        $product = new NewsModel;
+        $new = new NewsModel;
         if ($request->file('image')) {
             $input['image'] = Cloudinary::upload($request->file('image')->getRealPath())->getSecurePath();
         }
-        $product->title = $input['title'];
-        $product->name = $input['name'];
-        $product->price = $input['price'];
-        $product->acreage = $input['acreage'];
-        $product->bedroom = $input['bedroom'];
-        $product->status = $input['status'];
-        $product->description = $input['description'];
-        $product->img = $input['image'];
-        $product->user_id = $id;
-        $product->save();
+        $new->title = $input['title'];
+        $new->des = $input['description'];
+        $new->image = $input['image'];
+        $new->users_id = $id;
+        $new->save();
 
         return redirect("/news");
     }
 
     public function edit($id)
     {
-        $product = NewsModel::find($id);
-        return view("News.edit", compact('product'));
+        $new = NewsModel::find($id);
+        return view("News.edit", compact('new'));
     }
 
     public function update(Request $request, $id): RedirectResponse
     {
         $request->validate([
             'title' => ['required', 'string', 'max:255'],
-            'name' => ['required', 'string', 'max:255'],
-            'price' => ['required'],
-            'acreage' => ['required'],
-            'bedroom' => ['required', 'integer'],
-            'status' => ['required', 'string'],
             'image' => ['required', 'image', 'max:2048']
         ]);
-        $product = NewsModel::find($id);
+        $new = NewsModel::find($id);
         $input = $request->all();
         $id = \Auth::id();
         if ($request->file('image')) {
             $input['image'] = Cloudinary::upload($request->file('image')->getRealPath())->getSecurePath();
         }
-        $product->title = $input['title'];
-        $product->name = $input['name'];
-        $product->price = $input['price'];
-        $product->acreage = $input['acreage'];
-        $product->bedroom = $input['bedroom'];
-        $product->status = $input['status'];
-        $product->description = $input['description'];
-        $product->img = $input['image'];
-        $product->user_id = $id;
-        $product->save();
+        $new->title = $input['title'];
+        $new->des = $input['description'];
+        $new->image = $input['image'];
+        $new->users_id = $id;
+        $new->save();
 
         return redirect("/news");
     }
