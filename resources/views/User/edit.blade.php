@@ -21,7 +21,7 @@
                 <option {{ ($user -> role == '3' ? "selected":"") }} value="3">Người dùng</option>
               </select>
             <br>
-            <input type="submit" value="Thêm mới" class="btn btn-success">
+            <input type="submit" value="Cập nhật" class="btn btn-success">
         </form>
     </div>
 </div>

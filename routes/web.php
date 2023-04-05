@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -16,13 +19,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [HomeController::class, 'index']);
+Route::group(['namespace' => 'Home', 'prefix' => 'home'], function () {
+    Route::get('/product-detail/{id}', [ProductsController::class, 'detailHome']);
 });
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -51,6 +54,22 @@ Route::middleware('auth')->group(function () {
         Route::get('/{id}/edit', [PostController::class, 'edit']);
         Route::put('/{id}/update', [PostController::class, 'update']);
         Route::delete('/{id}/delete', [PostController::class, 'destroy']);
+    });
+    Route::group(['namespace' => 'Products', 'prefix' => 'products'], function () {
+        Route::get('/', [ProductsController::class, 'index']);
+        Route::get('/create', [ProductsController::class, 'create']);
+        Route::post('/add', [ProductsController::class, 'store']);
+        Route::get('/{id}/edit', [ProductsController::class, 'edit']);
+        Route::put('/{id}/update', [ProductsController::class, 'update']);
+        Route::delete('/{id}/delete', [ProductsController::class, 'destroy']);
+    });
+    Route::group(['namespace' => 'News', 'prefix' => 'news'], function () {
+        Route::get('/', [NewsController::class, 'index']);
+        Route::get('/create', [NewsController::class, 'create']);
+        Route::post('/add', [NewsController::class, 'store']);
+        Route::get('/{id}/edit', [NewsController::class, 'edit']);
+        Route::put('/{id}/update', [NewsController::class, 'update']);
+        Route::delete('/{id}/delete', [NewsController::class, 'destroy']);
     });
 });
 

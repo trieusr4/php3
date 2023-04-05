@@ -210,19 +210,13 @@
             </ul>
             <ul class="sidebar-menu" data-widget="tree">
                 <li class=" active menu-open ">
-                    <a href=""><i class="fa fa-user"></i> <span>Tin Tức</span></a>
+                    <a href="news"><i class="fa fa-user"></i> <span>Tin Tức</span></a>
                    
                 </li>
             </ul>
             <ul class="sidebar-menu" data-widget="tree">
                 <li class=" active menu-open ">
-                    <a href=""><i class="fa fa-user"></i> <span>Dự Án</span></a>
-                   
-                </li>
-            </ul>
-            <ul class="sidebar-menu" data-widget="tree">
-                <li class=" active menu-open ">
-                    <a href=""><i class="fa fa-user"></i> <span>Banner</span></a>
+                    <a href="/products"><i class="fa fa-user"></i> <span>Dự Án</span></a>
                    
                 </li>
             </ul>

@@ -13,9 +13,18 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string("name");
-            $table->string("price");
             $table->timestamps();
+            $table->string("title");
+            $table->string("name");
+            $table->float("price");
+            $table->string("img");
+            $table->text("description");
+            // diện tích
+            $table->float("acreage");
+            // phòng ngủ
+            $table->tinyInteger("bedroom");
+            $table->tinyInteger("status");
+            $table->bigInteger("user_id");
         });
     }
 
