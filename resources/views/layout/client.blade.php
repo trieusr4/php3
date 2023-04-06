@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ asset('assets/style.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/css/skins/blue.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css')}}">
+    
 </head>
 
 <body class="mdc-theme--background">
@@ -212,10 +213,10 @@
                             <span class="mdc-button__ripple"></span>
                             <i class="material-icons mdc-button__icon mx-1">
                                 <img id=""
-                                {{-- src="{{ $objUser->hinh?''.Storage::url($objUser->hinh):'http://placehold.it/100x100' }}" --}}
+                                src=""
                                 alt="">
                             </i>
-                            {{-- <span class="mdc-button__label">{{$objUser->user_name}}</span> --}}
+                            {{-- <span class="mdc-button__label"></span> --}}
                             <i class="material-icons mdc-button__icon m-0">arrow_drop_down</i>
                         </button>
                         <div class="mdc-menu mdc-menu-surface user-menu">
@@ -261,42 +262,40 @@
                     </svg>
                 </a>
                 <div class="horizontal-menu d-none d-md-flex d-lg-flex d-xl-flex">
-                    {{-- @foreach ($list as $items) --}}
                                
-                    <div class="mdc-menu-surface--anchor">
+                    <div>
                         <a href="" class="mdc-button menu-item-has-children">
                             <span class="mdc-button__ripple"></span>
                             <span class="mdc-button__label">Dự án</span>
                         </a>
-                         
                         <div class="mdc-menu mdc-menu-surface">
                             <div class="mdc-list">
                                 <div>
-                                    {{-- <a href="{{route('route_BackEnd_project_font_Project_font')}}" class="mdc-button"> --}}
+                                    <a href="" class="mdc-button">
                                         <span class="mdc-button__ripple"></span>
                                         <span class="mdc-button__label">Bán chung cư</span>
                                     </a>
                                 </div>
                                 <div>
-                                    {{-- <a href="{{route('route_BackEnd_project_font_Project_font')}}" class="mdc-button"> --}}
+                                    <a href="" class="mdc-button">
                                         <span class="mdc-button__ripple"></span>
                                         <span class="mdc-button__label">Bán nhà riêng</span>
                                     </a>
                                 </div>
                                 <div>
-                                    {{-- <a href="{{route('route_BackEnd_project_font_Project_font')}}" class="mdc-button"> --}}
+                                    <a href="" class="mdc-button">
                                         <span class="mdc-button__ripple"></span>
                                         <span class="mdc-button__label">Bán nhà mặt phố</span>
                                     </a>
                                 </div>
                                 <div>
-                                    {{-- <a href="{{route('route_BackEnd_project_font_Project_font')}}" class="mdc-button"> --}}
+                                    <a href="" class="mdc-button">
                                         <span class="mdc-button__ripple"></span>
                                         <span class="mdc-button__label">Bán đất nền</span>
                                     </a>
                                 </div>
                                 <div>
-                                    {{-- <a href="{{route('route_BackEnd_project_font_Project_font')}}" class="mdc-button"> --}}
+                                    <a href="" class="mdc-button">
                                         <span class="mdc-button__ripple"></span>
                                         <span class="mdc-button__label">Khu nghỉ dưỡng</span>
                                     </a>
@@ -304,8 +303,8 @@
                             </div>
                         </div>
                     </div>
-                    {{-- @endforeach   --}}
-                    <div class="mdc-menu-surface--anchor">
+                    
+                    <div>
                         <a href="" class="mdc-button menu-item-has-children">
                             <span class="mdc-button__ripple"></span>
                             <span class="mdc-button__label">Nhà cho thuê</span>
@@ -353,7 +352,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mdc-menu-surface--anchor">
+                    <div >
                         <a href="" class="mdc-button menu-item-has-children">
                             <span class="mdc-button__ripple"></span>
                             <span class="mdc-button__label">Tin tức</span>
@@ -367,26 +366,26 @@
                                     </a>
                                 </div>
                                 <div>
-                                    {{-- <a href="{{route('route_BackEnd_news_font_News_font')}}" class="mdc-button"> --}}
+                                    <a href="" class="mdc-button">
                                         <span class="mdc-button__ripple"></span>
                                         <span class="mdc-button__label">Bất động sản HN</span>
                                     </a>
                                 </div>
                                 
                                 <div>
-                                    {{-- <a href="{{route('route_BackEnd_news_font_News_font')}}" class="mdc-button"> --}}
+                                    <a href="" class="mdc-button">
                                         <span class="mdc-button__ripple"></span>
                                         <span class="mdc-button__label">Tin thị trường</span>
                                     </a>
                                 </div>
                                 <div>
-                                    {{-- <a href="{{route('route_BackEnd_news_font_News_font')}}" class="mdc-button"> --}}
+                                    <a href="" class="mdc-button">
                                         <span class="mdc-button__ripple"></span>
                                         <span class="mdc-button__label">báo cáo  </span>
                                     </a>
                                 </div>
                                 <div>
-                                    {{-- <a href="{{route('route_BackEnd_news_font_News_font')}}" class="mdc-button"> --}}
+                                    <a href="" class="mdc-button">
                                         <span class="mdc-button__ripple"></span>
                                         <span class="mdc-button__label">phân tích</span>
                                     </a>
@@ -399,8 +398,8 @@
                             <span class="">Liên Hệ</span>
                         </a>
                     </div>
-                    <div>
-                        <a href="about.html" class="mdc-button">
+                    <div >
+                        <a href="" class="mdc-button">
                             <span class="mdc-button__ripple"></span>
                             <span class="mdc-button__label">Bảng tin</span>
                         </a>
@@ -416,7 +415,6 @@
             </div>
         </div>
     </header>
-
     @yield('content')
     {{-- @yield('name') --}}
     <footer>

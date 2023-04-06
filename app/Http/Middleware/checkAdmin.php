@@ -16,9 +16,9 @@ class checkAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $user= $request->user();
+        $user= $request->users();
         if($user->role==3||$user->role==2){
-            return redirect("/dashboard");
+            return redirect("/");
         } else if ($user->role==1){
             return redirect("/users");
         }

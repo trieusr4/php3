@@ -1,5 +1,6 @@
 @extends('layout.admin')
 @section('content')
+
 <div class="container">
     <div class="row">
         <div class="col-lg-6"><a href="/users/create" class="btn btn-primary">Thêm</a></div>
@@ -47,6 +48,7 @@
                 @endforeach
             </tbody>
         </table>
+        
     </div>
 </div>
 @endsection

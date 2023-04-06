@@ -1,6 +1,8 @@
 @extends('layout.client')
 
 @section('content')
+
+
     <div class="header-image-wrapper">
         <div class="bg" style="background-image: url('assets/images/others/about.jpg');"></div>
         <div class="mask"></div>
@@ -635,79 +637,11 @@
                     </div>
                 </div>
                 <div class="row p-2 w-100">
-                    <div class="row mdc-card between-xs middle-xs w-100 p-2 filter-row mdc-elevation--z1 text-muted">
-                        <div class="mdc-menu-surface--anchor">
-                            <button class="mdc-button mdc-ripple-surface text-muted mutable">
-                                <span class="mdc-button__ripple"></span>
-                                <span class="mdc-button__label"><span class="mutable">Sort by Default</span></span>
-                                <i class="material-icons mdc-button__icon m-0">arrow_drop_down</i>
-                            </button>
-                            <div class="mdc-menu mdc-menu-surface">
-                                <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical"
-                                    tabindex="-1">
-                                    <li class="mdc-list-item" role="menuitem">
-                                        <span class="mdc-list-item__text">Sort by Default</span>
-                                    </li>
-                                    <li class="mdc-list-item" role="menuitem">
-                                        <span class="mdc-list-item__text">Newest</span>
-                                    </li>
-                                    <li class="mdc-list-item" role="menuitem">
-                                        <span class="mdc-list-item__text">Oldest</span>
-                                    </li>
-                                    <li class="mdc-list-item" role="menuitem">
-                                        <span class="mdc-list-item__text">Popular</span>
-                                    </li>
-                                    <li class="mdc-list-item" role="menuitem">
-                                        <span class="mdc-list-item__text">Price (Low to High)</span>
-                                    </li>
-                                    <li class="mdc-list-item" role="menuitem">
-                                        <span class="mdc-list-item__text">Price (High to Low)</span>
-                                    </li>
-                                </ul>
-                            </div>
+                    
+                        <div class="row">
+                          
                         </div>
-                        <div class="row middle-xs d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex">
-                            <div class="mdc-menu-surface--anchor">
-                                <button class="mdc-button mdc-ripple-surface text-muted">
-                                    <span class="mdc-button__ripple"></span>
-                                    <span class="mdc-button__label">Show<span class="mx-2 mutable">8</span></span>
-                                    <i class="material-icons mdc-button__icon m-0">arrow_drop_down</i>
-                                </button>
-                                <div class="mdc-menu mdc-menu-surface">
-                                    <ul class="mdc-list" role="menu" aria-hidden="true" aria-orientation="vertical"
-                                        tabindex="-1">
-                                        <li class="mdc-list-item" role="menuitem">
-                                            <span class="mdc-list-item__text">8</span>
-                                        </li>
-                                        <li class="mdc-list-item" role="menuitem">
-                                            <span class="mdc-list-item__text">12</span>
-                                        </li>
-                                        <li class="mdc-list-item" role="menuitem">
-                                            <span class="mdc-list-item__text">16</span>
-                                        </li>
-                                        <li class="mdc-list-item" role="menuitem">
-                                            <span class="mdc-list-item__text">24</span>
-                                        </li>
-                                        <li class="mdc-list-item" role="menuitem">
-                                            <span class="mdc-list-item__text">36</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <button class="mdc-icon-button material-icons view-type" data-view-type="list" data-col="1"
-                                data-full-width-page="true">view_list</button>
-                            <button class="mdc-icon-button view-type" data-view-type="grid" data-col="2"
-                                data-full-width-page="true">
-                                <svg class="material-icons mat-icon-sm" viewBox="0 0 25 25">
-                                    <path d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3" />
-                                </svg>
-                            </button>
-                            <button class="mdc-icon-button view-type material-icons d-none d-md-flex d-lg-flex d-xl-flex"
-                                data-view-type="grid" data-col="3" data-full-width-page="true">view_module</button>
-                            <button class="mdc-icon-button view-type material-icons d-none d-lg-flex d-xl-flex"
-                                data-view-type="grid" data-col="4" data-full-width-page="true">view_comfy</button>
-                        </div>
-                    </div>
+            
                 </div>
                 @foreach ($listProduct as $item)
                     <div class="row item col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
@@ -716,70 +650,20 @@
                                 <div class="row property-status">
                                     <span class="green">For Sale</span>
                                 </div>
-                                <div class="property-image">
-                                    <div class="swiper-container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <img src="assets/images/others/transparent-bg.png" alt="slide image"
-                                                    data-src="assets/images/props/flat-1/1-medium.jpg"
-                                                    class="slide-item swiper-lazy">
-                                                <div class="swiper-lazy-preloader"></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="assets/images/others/transparent-bg.png" alt="slide image"
-                                                    data-src="assets/images/props/flat-1/2-medium.jpg"
-                                                    class="slide-item swiper-lazy">
-                                                <div class="swiper-lazy-preloader"></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="assets/images/others/transparent-bg.png" alt="slide image"
-                                                    data-src="assets/images/props/flat-1/3-medium.jpg"
-                                                    class="slide-item swiper-lazy">
-                                                <div class="swiper-lazy-preloader"></div>
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="assets/images/others/transparent-bg.png" alt="slide image"
-                                                    data-src="assets/images/props/flat-1/4-medium.jpg"
-                                                    class="slide-item swiper-lazy">
-                                                <div class="swiper-lazy-preloader"></div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-pagination white"></div>
-                                        <button class="mdc-icon-button swiper-button-prev swipe-arrow"><i
-                                                class="material-icons mat-icon-lg">keyboard_arrow_left</i></button>
-                                        <button class="mdc-icon-button swiper-button-next swipe-arrow"><i
-                                                class="material-icons mat-icon-lg">keyboard_arrow_right</i></button>
-                                    </div>
-                                </div>
-                                <div class="control-icons">
-                                    <button class="mdc-button add-to-favorite" title="Add To Favorite">
-                                        <i class="material-icons mat-icon-sm">favorite_border</i>
-                                    </button>
-                                    <button class="mdc-button" title="Add To Compare">
-                                        <i class="material-icons mat-icon-sm">compare_arrows</i>
-                                    </button>
-                                </div>
+                               <img src="{{$item->img}}" alt="" style="max-width: 100%; margin-bottom: 10px;" >
+                                
                             </div>
                             <div class="property-content-wrapper">
 
                                 <div class="property-content">
                                     <div class="content">
                                         <h1 class="title"><a href="#">{{ $item->title }}</a></h1>
-                                        {{-- <p class="row address flex-nowrap">
-                                    <i class="material-icons text-muted">location_on</i>
-                                    <span>611 W 180th St, New York, NY 10033, USA</span>
-                                </p> --}}
+                                      
                                         <div class="row between-xs middle-xs">
                                             <h3 class="primary-color price">
                                                 <span>{{ $item->price }} tỉ</span>
                                             </h3>
-                                            {{-- <div class="row start-xs middle-xs ratings" title="29">      
-                                        <i class="material-icons mat-icon-sm">star</i>
-                                        <i class="material-icons mat-icon-sm">star</i>
-                                        <i class="material-icons mat-icon-sm">star</i>
-                                        <i class="material-icons mat-icon-sm">star</i>
-                                        <i class="material-icons mat-icon-sm">star_half</i>
-                                    </div> --}}
+                                           
                                         </div>
                                         <div class="d-none d-md-flex d-lg-flex d-xl-flex">
                                             <div class="description mt-3">
@@ -803,61 +687,17 @@
                                         </a>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
                 @endforeach
-                <div class="row center-xs middle-xs p-2 mt-2 w-100">
-                    <a href="javascript:void(0);" class="mdc-button mdc-button--raised">
-                        <span class="mdc-button__ripple"></span>
-                        <span class="mdc-button__label">load more</span>
-                    </a>
-                </div>
+                <hr>
+            </div>
+            <div class="" >
+                {{ $listProduct->links() }}
             </div>
         </div>
     </div>
 
-    {{-- <div class="section mt-3">
-        <div class="px-3">
-            <div class="theme-container">
-                <h1 class="section-title">Our Services</h1>
-                <div class="services-wrapper row">
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 p-2">
-                        <div class="mdc-card h-100 w-100 text-center middle-xs p-3">
-                            <i class="material-icons mat-icon-xlg primary-color">location_on</i>
-                            <h2 class="capitalize fw-600 my-3">Find places anywhere in the world</h2>
-                            <p class="text-muted fw-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                                vestibulum egestas nunc sed ultricies.</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 p-2">
-                        <div class="mdc-card h-100 w-100 text-center middle-xs p-3">
-                            <i class="material-icons mat-icon-xlg primary-color">supervisor_account</i>
-                            <h2 class="capitalize fw-600 my-3">We have agents with experience</h2>
-                            <p class="text-muted fw-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                                vestibulum egestas nunc sed ultricies.</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 p-2">
-                        <div class="mdc-card h-100 w-100 text-center middle-xs p-3">
-                            <i class="material-icons mat-icon-xlg primary-color">home</i>
-                            <h2 class="capitalize fw-600 my-3">Buy or rent beautiful properties</h2>
-                            <p class="text-muted fw-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                                vestibulum egestas nunc sed ultricies.</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 p-2">
-                        <div class="mdc-card h-100 w-100 text-center middle-xs p-3">
-                            <i class="material-icons mat-icon-xlg primary-color">format_list_bulleted</i>
-                            <h2 class="capitalize fw-600 my-3">With agent account you can list properties</h2>
-                            <p class="text-muted fw-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                                vestibulum egestas nunc sed ultricies.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> --}}
+
 @endsection

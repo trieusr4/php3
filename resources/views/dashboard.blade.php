@@ -15,7 +15,7 @@
             <form action="javascript:void(0);" id="filters" class="search-wrapper"> 
                 <div class="row">  
                     <div class="col-xs-12 col-sm-6 col-md-4 p-2">
-                        <div class="mdc-select mdc-select--outlined">
+                     <div class="mdc-select mdc-select--outlined">
                             <div class="mdc-select__anchor">
                                 <i class="mdc-select__dropdown-icon"></i>
                                 <div class="mdc-select__selected-text"></div>

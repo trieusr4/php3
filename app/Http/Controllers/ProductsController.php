@@ -61,7 +61,8 @@ class ProductsController extends Controller
     public function detailHome($id)
     {
         $product = ProductsModel::find($id);
-        return view("Home.product-detail", compact('product'));
+        $listProduct=ProductsModel::get();
+        return view("Home.product-detail", compact('product','listProduct'));
     }
     public function update(Request $request, $id): RedirectResponse
     {

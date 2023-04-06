@@ -1,6 +1,8 @@
 @extends('layout.admin')
 @section('content')
+
 <div class="container">
+
     <div class="row">
         <form action="/users/{{ $user->id }}/update" method="post">
             @csrf
