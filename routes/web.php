@@ -60,6 +60,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/create', [ProductsController::class, 'create']);
         Route::post('/add', [ProductsController::class, 'store']);
         Route::get('/{id}/edit', [ProductsController::class, 'edit']);
+        Route::get('/{id}/detail', [ProductsController::class, 'detailHome']);
         Route::put('/{id}/update', [ProductsController::class, 'update']);
         Route::delete('/{id}/delete', [ProductsController::class, 'destroy']);
     });
