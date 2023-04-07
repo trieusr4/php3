@@ -31,7 +31,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::group(['namespace' => 'Categories', 'prefix' => 'categories'], function () {
+    Route::group(['namespace' => 'Categories', 'prefix' => 'categories', 'middleware' => 'role:admin'], function () {
         Route::get('/', [CategoryController::class, 'index']);
         Route::get('/create', [CategoryController::class, 'create']);
         Route::post('/add', [CategoryController::class, 'store']);
@@ -39,7 +39,7 @@ Route::middleware('auth')->group(function () {
         Route::put('/{id}/update', [CategoryController::class, 'update']);
         Route::delete('/{id}/delete', [CategoryController::class, 'destroy']);
     });
-    Route::group(['namespace' => 'Users', 'prefix' => 'users'], function () {
+    Route::group(['namespace' => 'Users', 'prefix' => 'users', 'middleware' => 'role:admin'], function () {
         Route::get('/', [UserController::class, 'index']);
         Route::get('/create', [UserController::class, 'create']);
         Route::post('/add', [UserController::class, 'store']);
@@ -47,7 +47,7 @@ Route::middleware('auth')->group(function () {
         Route::put('/{id}/update', [UserController::class, 'update']);
         Route::delete('/{id}/delete', [UserController::class, 'destroy']);
     });
-    Route::group(['namespace' => 'Post', 'prefix' => 'post'], function () {
+    Route::group(['namespace' => 'Post', 'prefix' => 'post', 'middleware' => 'role:admin'], function () {
         Route::get('/', [PostController::class, 'index']);
         Route::get('/create', [PostController::class, 'create']);
         Route::post('/add', [PostController::class, 'store']);
@@ -55,16 +55,16 @@ Route::middleware('auth')->group(function () {
         Route::put('/{id}/update', [PostController::class, 'update']);
         Route::delete('/{id}/delete', [PostController::class, 'destroy']);
     });
-    Route::group(['namespace' => 'Products', 'prefix' => 'products'], function () {
+    Route::group(['namespace' => 'Products', 'prefix' => 'products', 'middleware' => 'role:writer'], function () {
         Route::get('/', [ProductsController::class, 'index']);
         Route::get('/create', [ProductsController::class, 'create']);
         Route::post('/add', [ProductsController::class, 'store']);
         Route::get('/{id}/edit', [ProductsController::class, 'edit']);
-        Route::get('/{id}/detail', [ProductsController::class, 'detailHome']);
+        Route::get('/{id}/detail', [ProductsController::class, 'detailHome'])->withoutMiddleware([Role::class]);;
         Route::put('/{id}/update', [ProductsController::class, 'update']);
         Route::delete('/{id}/delete', [ProductsController::class, 'destroy']);
     });
-    Route::group(['namespace' => 'News', 'prefix' => 'news'], function () {
+    Route::group(['namespace' => 'News', 'prefix' => 'news', 'middleware' => 'role:admin'], function () {
         Route::get('/', [NewsController::class, 'index']);
         Route::get('/create', [NewsController::class, 'create']);
         Route::post('/add', [NewsController::class, 'store']);
