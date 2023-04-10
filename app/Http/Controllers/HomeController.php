@@ -9,7 +9,7 @@ class HomeController extends Controller
     //
     public function index()
     {
-        $listProduct = ProductsModel::paginate(5);
+        $listProduct = ProductsModel::search() -> paginate(5);
         return view('Home.index', compact('listProduct'));
     } 
 }
