@@ -200,12 +200,12 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu" data-widget="tree">
                 <li class=" active menu-open ">
-                    <a href="/users"><i class="fa fa-user"></i> <span>User</span></a>
+                    <a href="/users"><i class="fa fa-user"></i> <span>Người dùng</span></a>
                 </li>
             </ul>
             <ul class="sidebar-menu" data-widget="tree">
                 <li class=" active menu-open ">
-                    <a href="/categories"><i class="fa fa-user"></i> <span>Categories</span></a>
+                    <a href="/categories"><i class="fa fa-user"></i> <span>Danh mục</span></a>
                 </li>
             </ul>
             <ul class="sidebar-menu" data-widget="tree">

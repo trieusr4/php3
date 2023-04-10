@@ -12,7 +12,7 @@ class ProductsController extends Controller
 {
     public function index()
     {
-        $list = ProductsModel::all();
+        $list = ProductsModel::search() -> paginate(5);
         return view('Products.index', ['list' => $list]);
     }
 

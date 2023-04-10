@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->integer("users_id");
             $table->integer("posts_id");
-            $table->integer("parent_id");
+            $table->integer("parent_id") ->nullable();
             $table->string("content");
             $table->timestamps();
         });

@@ -12,7 +12,7 @@ class CategoryController extends Controller
     //
     public function index()
     {
-        $list = CategoryModel::all();
+        $list = CategoryModel::search() -> paginate(5);
         return view('Categories.index', ['list' => $list]);
     }
 
