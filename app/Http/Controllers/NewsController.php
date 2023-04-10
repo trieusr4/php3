@@ -11,7 +11,7 @@ class NewsController extends Controller
 {
     public function index()
     {
-        $list = NewsModel::paginate(5);
+        $list = NewsModel::search() -> paginate(5);
         return view('News.index', ['list' => $list]);
     }
 

@@ -9,4 +9,11 @@ class ProductsModel extends Model
 {
     use HasFactory;
     protected $table= 'products';
+
+    public function scopeSearch($query) {
+        if($key = request() ->key) {
+            $query = $query->where('title', 'like', '%' . $key . '%');
+        }
+        return $query;
+    }
 }

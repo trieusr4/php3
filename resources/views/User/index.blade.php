@@ -3,6 +3,12 @@
 
 <div class="container">
     <div class="row">
+        <form action="" style="margin-bottom: 35px; margin-top: 25px; display: flex">
+            <div class="input-group mb-3">
+                <input value="{{ request()->key }}" name="key" type="text" class="form-control" placeholder="">
+            </div>
+            <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+        </form>
         <div class="col-lg-6"><a href="/users/create" class="btn btn-primary">Thêm</a></div>
         <div class="col-lg-6"></div>
         <table class="table">
@@ -48,7 +54,7 @@
                 @endforeach
             </tbody>
         </table>
-        {{ $list->links() }}
+        {{ $list->appends(request()->all())->links() }}
     </div>
 </div>
 @endsection
