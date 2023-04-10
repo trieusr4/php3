@@ -11,7 +11,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $list = UserModel::search() -> paginate(5);
+        $list = UserModel::search() -> paginate(4);
         return view('User.index', ['list' => $list]);
     }
 
