@@ -16,7 +16,7 @@ class Role
      */
     public function handle(Request $request, Closure $next, string $role): Response
     {
-        $valRole = \Auth::user() -> role;
+        $valRole = Auth::user() -> role;
         if($role == 'admin' && $valRole == 1) return $next($request);
         if($role == 'writer' && ($valRole == 2 || $valRole == 1)) return $next($request);
         return redirect('/');

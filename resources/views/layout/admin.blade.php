@@ -155,20 +155,24 @@
                             <li>
                                 <p style="padding: 10px;">
                                     <i class="fa fa-user"></i> Email:<br>
-
                                 </p>
+                            </li>
+                            <li>
+                                <a href="/" class="mdc-list-item" role="menuitem">
+                                
+                                    <p>HOME</p>
+                                    
+                                </a>
                             </li>
                             <li class="user-footer">
                                 <div class="pull-right">
                                     <form method="POST" action="{{ route('logout') }}">
                                         @csrf
-                            
                                         <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                                             {{ __('Log Out') }}
                                         </button>
                                     </form>
                                 </div>
-                                
                             </li>
                         </ul>
                     </li>

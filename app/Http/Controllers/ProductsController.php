@@ -102,4 +102,4 @@ class ProductsController extends Controller
         $categoria->delete();
         return redirect("/products");
     }
-}
+}   

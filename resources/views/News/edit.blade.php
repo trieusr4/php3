@@ -1,5 +1,6 @@
 @extends('layout.admin')
 @section('content')
+
     <div class="container">
         <div class="row">
             <form action="/news/{{ $new->id }}/update" method="post" enctype="multipart/form-data">
