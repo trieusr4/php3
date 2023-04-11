@@ -6,13 +6,14 @@ use App\Http\Controllers\Controller;
 use App\Models\ProductsModel;
 use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class ProductsController extends Controller
 {
     public function index()
     {
-        $list = ProductsModel::search() -> paginate(5);
+        $list = ProductsModel::search() -> paginate(4);
         return view('Products.index', ['list' => $list]);
     }
 
@@ -33,7 +34,7 @@ class ProductsController extends Controller
             'image' => ['required', 'image', 'max:2048']
         ]);
         $input = $request->all();
-        $id = \Auth::id();
+        $id = Auth::id();
         $product = new ProductsModel;
         if ($request->file('image')) {
             $input['image'] = Cloudinary::upload($request->file('image')->getRealPath())->getSecurePath();
@@ -77,7 +78,7 @@ class ProductsController extends Controller
         ]);
         $product = ProductsModel::find($id);
         $input = $request->all();
-        $id = \Auth::id();
+        $id = Auth::id();
         if ($request->file('image')) {
             $input['image'] = Cloudinary::upload($request->file('image')->getRealPath())->getSecurePath();
         }
@@ -101,4 +102,4 @@ class ProductsController extends Controller
         $categoria->delete();
         return redirect("/products");
     }
-}
+}   

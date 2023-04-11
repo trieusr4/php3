@@ -1,9 +1,11 @@
 @extends('layout.admin')
 @section('content')
+
     <div class="container">
         <div class="row">
-            <form action="/news/add" method="post" enctype="multipart/form-data">
+            <form action="/news/{{ $new->id }}/update" method="post" enctype="multipart/form-data">
                 @csrf
+                @Method('PUT')
                 <label for="">Tiêu đề:</label>
                 <input value="{{$new -> title}}" type="text" name="title" class="form-control">
                 <br>

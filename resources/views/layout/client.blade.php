@@ -1,6 +1,4 @@
-{{-- <?php
-//    $objUser = \Illuminate\Support\Facades\Auth::user();
-?> --}}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -224,13 +222,15 @@
                                 tabindex="-1">
                                 <li class="user-info row start-xs middle-xs">
                                     <img src="assets/images/others/user.jpg" alt="user-image" width="50">
-                                    {{-- <p class="m-0">{{$objUser->email}}<br> <small><i></i></small></p> --}}
+                                    <p class="m-0"><br> <small><i></i></small></p>
                                 </li>
                                 <li role="separator" class="mdc-list-divider m-0"></li>
                                 <li>
-                                    <a href="submit-property.html" class="mdc-list-item" role="menuitem">
+                                    <a href="/users" class="mdc-list-item" role="menuitem">
+                                       
                                         <i class="material-icons mat-icon-sm text-muted">add_circle</i>
-                                        {{-- <span class="mdc-list-item__text px-3">{{$objUser->phone_number}}</span> --}}
+                                        <p>Admin</p>
+                                        
                                     </a>
                                 </li>
                                 <li role="separator" class="mdc-list-divider m-0"></li>
@@ -239,7 +239,6 @@
                                         <i class="material-icons mat-icon-sm text-muted">power_settings_new</i>
                                         <form method="POST" action="{{ route('logout') }}">
                                             @csrf
-                                
                                             <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                                                 {{ __('Log Out') }}
                                             </button>

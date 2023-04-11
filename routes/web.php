@@ -20,8 +20,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/new', [HomeController::class, 'new']);
 Route::group(['namespace' => 'Home', 'prefix' => 'home'], function () {
     Route::get('/product-detail/{id}', [ProductsController::class, 'detailHome']);
+    Route::get('/new-detail/{id}', [NewsController::class, 'detailHome']);
 });
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
@@ -71,9 +73,8 @@ Route::middleware('auth')->group(function () {
         Route::get('/{id}/edit', [NewsController::class, 'edit']);
         Route::put('/{id}/update', [NewsController::class, 'update']);
         Route::delete('/{id}/delete', [NewsController::class, 'destroy']);
+        Route::get('/{id}/detail', [NewsController::class, 'detailHome'])->withoutMiddleware([Role::class]);;
     });
 });
-
-
 
 require __DIR__ . '/auth.php';
