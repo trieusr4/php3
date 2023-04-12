@@ -8,12 +8,13 @@ use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Share;
 
 class ProductsController extends Controller
 {
     public function index()
     {
-        $list = ProductsModel::search() -> paginate(4);
+        $list = ProductsModel::search()->paginate(4);
         return view('Products.index', ['list' => $list]);
     }
 
@@ -62,8 +63,17 @@ class ProductsController extends Controller
     public function detailHome($id)
     {
         $product = ProductsModel::find($id);
-        $listProduct=ProductsModel::get();
-        return view("Home.product-detail", compact('product','listProduct'));
+        $listProduct = ProductsModel::get();
+        $shareButtons1 = Share::page(
+            'http://127.0.0.1:8000/home/product-detail/' . $id
+        )
+            ->facebook()
+            ->twitter()
+            ->linkedin()
+            ->telegram()
+            ->whatsapp()
+            ->reddit();
+        return view("Home.product-detail", compact('product', 'listProduct', 'shareButtons1'));
     }
     public function update(Request $request, $id): RedirectResponse
     {
@@ -102,4 +112,4 @@ class ProductsController extends Controller
         $categoria->delete();
         return redirect("/products");
     }
-}   
+}
