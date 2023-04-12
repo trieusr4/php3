@@ -19,6 +19,7 @@ class UserSeeder extends Seeder
                 'email'=>"trieu@gmail.com",
                 'password'=>bcrypt('123456'),
                 'role'=>1,
+                'category_id'=> 1
             ]);
     }
 }}

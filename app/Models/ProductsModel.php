@@ -16,4 +16,9 @@ class ProductsModel extends Model
         }
         return $query;
     }
+
+    public function comments()
+    {
+        return $this->hasMany(CommentsModel::class)->whereNull('parent_id');
+    }
 }

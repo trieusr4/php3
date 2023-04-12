@@ -63,7 +63,7 @@ class ProductsController extends Controller
     public function detailHome($id)
     {
         $product = ProductsModel::find($id);
-        $listProduct = ProductsModel::get();
+        dd($product);
         $shareButtons1 = Share::page(
             'http://127.0.0.1:8000/home/product-detail/' . $id
         )
@@ -73,7 +73,7 @@ class ProductsController extends Controller
             ->telegram()
             ->whatsapp()
             ->reddit();
-        return view("Home.product-detail", compact('product', 'listProduct', 'shareButtons1'));
+        return view("Home.product-detail", compact('product', 'shareButtons1'));
     }
     public function update(Request $request, $id): RedirectResponse
     {
