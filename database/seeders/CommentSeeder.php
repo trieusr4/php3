@@ -15,8 +15,8 @@ class CommentSeeder extends Seeder
     {
         for ($i=0;$i<5;$i++){
             DB::table('comments')->insert([
-                'posts_id'=>$i,
-                'users_id'=>$i,
+                'product_id'=>1,
+                'user_id'=>1,
                 'parent_id'=>$i,
                 'content'=>"rat dep"
             ]);

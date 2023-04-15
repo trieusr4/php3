@@ -23,7 +23,7 @@ class PostsSeeder extends Seeder
                 Thứ ba, là nhóm chủ đầu tư BĐS “tiềm lực” có tỷ lệ nợ ngắn hạn và tổng nợ thấp, quy mô tài sản lớn, điển hình có thể kể tới Khang Điền (KDH). Chúng tôi quan sát thấy những doanh nghiệp ở vị thế tiềm lực tập trung vào các sản phẩm BĐS tạo dòng tiền bền vững​, tìm kiếm cơ hội với phân khúc/loại hình mới​ và thu mua quỹ đất hợp lý, mở rộng đến khu vực địa lý mới.
                 Ngoài các nhóm hiện tại, thị trường xuất hiện nhóm “người chơi mới”, nhóm này là một ẩn số với các doanh nghiệp, quỹ đầu tư, v.v… đang tìm kiếm cơ hội thâm nhập thị trường BĐS​ ​thông qua M&A, thu mua quỹ đất với những doanh nghiệp BĐS phù hợp​ hoặc tự thành lập doanh nghiệp BĐS để phát triển sản phẩm riêng.
                 ",
-                'users_id'=>$i
+                'user_id'=>1
             ]);
         }
     }

@@ -24,7 +24,6 @@ return new class extends Migration
             // phòng ngủ
             $table->tinyInteger("bedroom");
             $table->tinyInteger("status");
-            $table->bigInteger("user_id");
         });
     }
 
