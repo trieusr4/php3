@@ -30,7 +30,8 @@ class ProductSeeder extends Seeder
            'acreage' => 60,
            'bedroom' => 3,
            'status' => 1,
-           'user_id' => 1
+           'user_id' => 1,
+           'category_id'=> 1
         ]);
     }
 }

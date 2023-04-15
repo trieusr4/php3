@@ -18,8 +18,7 @@ class UserSeeder extends Seeder
                 'name'=>"Meow",
                 'email'=>"trieu@gmail.com",
                 'password'=>bcrypt('123456'),
-                'role'=>1,
-                'category_id'=> 1
+                'role'=>1
             ]);
     }
 }}
