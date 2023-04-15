@@ -18,7 +18,22 @@ class CommentsController extends Controller
 
         $cmt = new CommentsModel;
         $id = Auth::id();
-        $cmt -> post_id = $request -> post_id;
+        $cmt -> product_id = $request -> product_id;
+        $cmt -> content = $request -> content;
+        $cmt -> user_id = $id;
+        $cmt->save();
+        return back();
+    }
+
+    public function replies(Request $request)
+    {
+    	$request->validate([
+            'content'=>'required',
+        ]);
+
+        $cmt = new CommentsModel;
+        $id = Auth::id();
+        $cmt -> product_id = $request -> product_id;
         $cmt -> parent_id = $request -> parent_id;
         $cmt -> content = $request -> content;
         $cmt -> user_id = $id;

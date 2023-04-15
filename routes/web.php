@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CommentsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProductsController;
@@ -62,7 +63,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/create', [ProductsController::class, 'create']);
         Route::post('/add', [ProductsController::class, 'store']);
         Route::get('/{id}/edit', [ProductsController::class, 'edit']);
-        Route::get('/{id}/detail', [ProductsController::class, 'detailHome'])->withoutMiddleware([Role::class]);;
+        Route::get('/{id}/detail', [ProductsController::class, 'detailHome'])->withoutMiddleware([Role::class]);
         Route::put('/{id}/update', [ProductsController::class, 'update']);
         Route::delete('/{id}/delete', [ProductsController::class, 'destroy']);
     });
@@ -73,7 +74,11 @@ Route::middleware('auth')->group(function () {
         Route::get('/{id}/edit', [NewsController::class, 'edit']);
         Route::put('/{id}/update', [NewsController::class, 'update']);
         Route::delete('/{id}/delete', [NewsController::class, 'destroy']);
-        Route::get('/{id}/detail', [NewsController::class, 'detailHome'])->withoutMiddleware([Role::class]);;
+        Route::get('/{id}/detail', [NewsController::class, 'detailHome'])->withoutMiddleware([Role::class]);
+    });
+    Route::group(['namespace' => 'Comments', 'prefix' => 'comments'], function () {
+        Route::post('/store', [CommentsController::class, 'store']);
+        Route::post('/replies', [CommentsController::class, 'replies']);
     });
 });
 

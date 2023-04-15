@@ -19,6 +19,6 @@ class ProductsModel extends Model
 
     public function comments()
     {
-        return $this->hasMany(CommentsModel::class)->whereNull('parent_id');
+        return $this->hasMany(CommentsModel::class, 'product_id', 'id');
     }
 }

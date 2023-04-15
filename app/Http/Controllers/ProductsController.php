@@ -62,8 +62,7 @@ class ProductsController extends Controller
 
     public function detailHome($id)
     {
-        $product = ProductsModel::find($id);
-        dd($product);
+        $product = ProductsModel::with('comments')->find($id);
         $shareButtons1 = Share::page(
             'http://127.0.0.1:8000/home/product-detail/' . $id
         )
