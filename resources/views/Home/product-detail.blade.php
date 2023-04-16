@@ -85,57 +85,6 @@
                                 {!! $shareButtons1 !!}
                             </div>
                         </div>
-                        <div class="col-xs-12 col-md-4 p-3">
-                            <form action="javascript:void(0);" class="contact-form">
-                                <h3 class="uppercase">Contact Me</h3>
-                                <div class="mdc-text-field mdc-text-field--outlined w-100 mt-3">
-                                    <input id="name" class="mdc-text-field__input">
-                                    <div class="mdc-notched-outline">
-                                        <div class="mdc-notched-outline__leading"></div>
-                                        <div class="mdc-notched-outline__notch">
-                                            <label for="name" class="mdc-floating-label">Name</label>
-                                        </div>
-                                        <div class="mdc-notched-outline__trailing"></div>
-                                    </div>
-                                </div>
-                                <div class="mdc-text-field mdc-text-field--outlined w-100 mt-3">
-                                    <input id="email" class="mdc-text-field__input">
-                                    <div class="mdc-notched-outline">
-                                        <div class="mdc-notched-outline__leading"></div>
-                                        <div class="mdc-notched-outline__notch">
-                                            <label for="email" class="mdc-floating-label">Email</label>
-                                        </div>
-                                        <div class="mdc-notched-outline__trailing"></div>
-                                    </div>
-                                </div>
-                                <div class="mdc-text-field mdc-text-field--outlined w-100 mt-3">
-                                    <input id="phone" class="mdc-text-field__input">
-                                    <div class="mdc-notched-outline">
-                                        <div class="mdc-notched-outline__leading"></div>
-                                        <div class="mdc-notched-outline__notch">
-                                            <label for="phone" class="mdc-floating-label">Phone</label>
-                                        </div>
-                                        <div class="mdc-notched-outline__trailing"></div>
-                                    </div>
-                                </div>
-                                <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--textarea w-100 mt-3">
-                                    <textarea id="message" class="mdc-text-field__input" rows="5"></textarea>
-                                    <div class="mdc-notched-outline mdc-notched-outline--upgraded">
-                                        <div class="mdc-notched-outline__leading"></div>
-                                        <div class="mdc-notched-outline__notch">
-                                            <label for="message" class="mdc-floating-label">Message</label>
-                                        </div>
-                                        <div class="mdc-notched-outline__trailing"></div>
-                                    </div>
-                                </div>
-                                <div class="w-100 text-center mt-4">
-                                    <button type="submit" class="mdc-button mdc-button--raised bg-accent">
-                                        <span class="mdc-button__ripple"></span>
-                                        <span class="mdc-button__label">Send Email</span>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
                     </div>
 
                 </div>

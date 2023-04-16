@@ -22,6 +22,7 @@
                         <th scope="col">Diện tích</th>
                         <th scope="col">Phòng ngủ</th>
                         <th scope="col">Trạng thái</th>
+                        <th scope="col">Danh mục</th>
                         <th scope="col">Người đăng</th>
                     </tr>
                 </thead>
@@ -39,7 +40,8 @@
                             <th scope="row">{{ $item->acreage }}</th>
                             <th scope="row">{{ $item->bedroom }}</th>
                             <th scope="row">{{ $item->status }}</th>
-                            <th scope="row">Duong</th>
+                            <th scope="row">{{ $item-> category -> name }}</th>
+                            <th scope="row">{{ $item-> user -> name }}</th>
                             <th scope="row"><a href="/products/{{ $item->id }}/edit" class="btn btn-warning">Sửa</a>
                             </th>
                             <th scope="row">
