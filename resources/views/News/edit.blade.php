@@ -15,7 +15,7 @@
                 <label for="">Mô tả:</label>
                 <input value="{{$new -> des}}" type="text" name="description" class="form-control">
                 <br>
-                <input type="submit" value="Thêm mới" class="btn btn-success">
+                <input type="submit" value="Câp Nhật" class="btn btn-success">
             </form>
         </div>
     </div>

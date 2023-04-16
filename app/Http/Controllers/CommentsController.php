@@ -6,11 +6,17 @@ use App\Http\Controllers\Controller;
 use App\Models\CommentsModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail as FacadesMail;
 use Mail;
 
 class CommentsController extends Controller
 {
     //
+    public function index()
+    {
+        $list = CommentsModel::search() -> paginate(4);
+        return view('Comments.index', ['list' => $list]);
+    }
     public function store(Request $request)
     {
         $request->validate([
@@ -50,5 +56,12 @@ class CommentsController extends Controller
         });
         $cmt->save();
         return back();
+        
+    }
+    public function destroy($id)
+    {
+        $comment = CommentsModel::find($id);
+        $comment->delete();
+        return redirect("/comments");
     }
 }

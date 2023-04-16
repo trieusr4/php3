@@ -76,9 +76,11 @@ Route::middleware('auth')->group(function () {
         Route::delete('/{id}/delete', [NewsController::class, 'destroy']);
         Route::get('/{id}/detail', [NewsController::class, 'detailHome'])->withoutMiddleware([Role::class]);
     });
-    Route::group(['namespace' => 'Comments', 'prefix' => 'comments'], function () {
+    Route::group(['namespace' => 'Comments', 'prefix' => 'comments','middleware' => 'role:admin'], function () {
+        Route::get('/', [CommentsController::class, 'index']);
         Route::post('/store', [CommentsController::class, 'store']);
         Route::post('/replies', [CommentsController::class, 'replies']);
+        Route::delete('/{id}/delete', [CommentsController::class, 'destroy']);
     });
 });
 
