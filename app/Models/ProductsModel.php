@@ -17,6 +17,16 @@ class ProductsModel extends Model
         return $query;
     }
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(CategoryModel::class, 'category_id', 'id');
+    }
+
     public function comments()
     {
         return $this->hasMany(CommentsModel::class, 'product_id', 'id');

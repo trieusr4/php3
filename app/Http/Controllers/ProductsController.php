@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\CategoryModel;
 use App\Models\ProductsModel;
 use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 use Illuminate\Http\Request;
@@ -20,7 +21,9 @@ class ProductsController extends Controller
 
     public function create()
     {
-        return view('Products.create');
+
+        $listCategory = CategoryModel::all();
+        return view('Products.create', ['listCategory' => $listCategory]);
     }
 
     public function store(Request $request): RedirectResponse
@@ -32,7 +35,8 @@ class ProductsController extends Controller
             'acreage' => ['required'],
             'bedroom' => ['required', 'integer'],
             'status' => ['required', 'string'],
-            'image' => ['required', 'image', 'max:2048']
+            'image' => ['required', 'image', 'max:2048'],
+            'category' => ['required']
         ]);
         $input = $request->all();
         $id = Auth::id();
@@ -49,6 +53,7 @@ class ProductsController extends Controller
         $product->description = $input['description'];
         $product->img = $input['image'];
         $product->user_id = $id;
+        $product->category_id = $input['category'];
         $product->save();
 
         return redirect("/products");
@@ -57,7 +62,8 @@ class ProductsController extends Controller
     public function edit($id)
     {
         $product = ProductsModel::find($id);
-        return view("Products.edit", compact('product'));
+        $listCategory = CategoryModel::all();
+        return view("Products.edit", compact('product', 'listCategory'));
     }
 
     public function detailHome($id)
@@ -83,7 +89,8 @@ class ProductsController extends Controller
             'acreage' => ['required'],
             'bedroom' => ['required', 'integer'],
             'status' => ['required', 'string'],
-            'image' => ['required', 'image', 'max:2048']
+            'image' => ['required', 'image', 'max:2048'],
+            'category' => ['required']
         ]);
         $product = ProductsModel::find($id);
         $input = $request->all();
@@ -100,6 +107,7 @@ class ProductsController extends Controller
         $product->description = $input['description'];
         $product->img = $input['image'];
         $product->user_id = $id;
+        $product->category_id = $input['category'];
         $product->save();
 
         return redirect("/products");

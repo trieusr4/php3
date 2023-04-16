@@ -42,7 +42,7 @@ class NewsController extends Controller
         $new->title = $input['title'];
         $new->des = $input['description'];
         $new->image = $input['image'];
-        $new->users_id = $id;
+        $new->user_id = $id;
         $new->save();
 
         return redirect("/news");
@@ -69,7 +69,7 @@ class NewsController extends Controller
         $new->title = $input['title'];
         $new->des = $input['description'];
         $new->image = $input['image'];
-        $new->users_id = $id;
+        $new->user_id = $id;
         $new->save();
 
         return redirect("/news");
