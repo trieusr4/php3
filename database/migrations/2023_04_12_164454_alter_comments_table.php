@@ -13,8 +13,8 @@ return new class extends Migration
     {
         //
         Schema::table('comments', function (Blueprint $table) {         
-            $table->foreignId('user_id')->constrained('comments');
-            $table->foreignId('product_id')->constrained('comments');
+            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('product_id')->constrained('products');
         });
     }
 
@@ -23,6 +23,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::table('comments', function (Blueprint $table) {
+            $table->dropForeign('comments_product_id_foreign');
+            $table->dropForeign('comments_user_id_foreign');
+        });
     }
 };
