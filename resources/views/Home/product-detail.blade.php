@@ -79,9 +79,6 @@
                                     {{ $product->bedroom }}</span></p>
                             <p class="row middle-xs"><i class="material-icons primary-color"></i><span
                                     class="mx-2 text-muted fw-500">Trạng thái: {{ $product->status }}</span></p>
-                            <p class="row middle-xs"><i class="material-icons primary-color">call</i><span
-                                    class="mx-2 text-muted fw-500">0961080094</span></p>
-                            <div class="social-btn-sp">
                                 {!! $shareButtons1 !!}
                             </div>
                         </div>

@@ -36,11 +36,11 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => 'smtp.gmail.com',
-            'port' => 587,
+            'host' => 'sandbox.smtp.mailtrap.io',
+            'port' => 2525,
             'encryption' => 'tls',
-            'username' => 'letrungduongxx3@gmail.com',
-            'password' => 'vprvnukidzuqdszg',
+            'username' => '4e433c1b65ac22',
+            'password' => '5913fed28d7bd9',
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN'),
         ],
