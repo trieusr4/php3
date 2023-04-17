@@ -8,6 +8,8 @@ use App\Models\ProductsModel;
 use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Jorenvh\Share\Share as ShareShare;
+use Jorenvh\Share\ShareFacade;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Share;
 

@@ -21,4 +21,10 @@ class CommentsModel extends Model
     {
         return $this->hasMany(CommentsModel::class) -> whereNotNull('parent_id');
     }
+    public function scopeSearch($query) {
+        if($key = request() ->key) {
+            $query = $query->where('name', 'like', '%' . $key . '%');
+        }
+        return $query;
+    }
 }

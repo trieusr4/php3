@@ -159,9 +159,7 @@
                             </li>
                             <li>
                                 <a href="/" class="mdc-list-item" role="menuitem">
-                                
-                                    <p>HOME</p>
-                                    
+                                    <p>HOME</p>   
                                 </a>
                             </li>
                             <li class="user-footer">
@@ -224,6 +222,12 @@
                    
                 </li>
             </ul>
+            <ul class="sidebar-menu" data-widget="tree">
+                <li class=" active menu-open ">
+                    <a href="/comments"><i class="fa fa-user"></i> <span>Bình Luận</span></a>
+                   
+                </li>
+            </ul>
         </section>
         <!-- /.sidebar -->
     </aside>
@@ -269,12 +273,12 @@
                 <div class="modal-container">
                     <div class="modal-header">
                         <slot name="header">
-                            default header
+                           
                         </slot>
                     </div>
                     <div class="modal-body">
                         <slot name="body">
-                            default body
+                         
                         </slot>
                     </div>
 
