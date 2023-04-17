@@ -14,7 +14,7 @@ class HomeController extends Controller
         return view('Home.index', compact('listProduct'));
     } 
     public function new(){
-        $listNew= NewsModel::search()->paginate(2);
+        $listNew= NewsModel::search()->paginate(4);
         return view('Home.new-font', compact('listNew'));
     }
 }

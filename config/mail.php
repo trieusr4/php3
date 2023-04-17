@@ -98,7 +98,7 @@ return [
     */
 
     'from' => [
-        'address' => 'letrungduongxx3@gmail.com',
+        'address' => 'letrungduongxx3@gmail.com','trieuthph18663@fpt.edu.vn',
         'name' => 'Le Trung Duong',
     ],
 

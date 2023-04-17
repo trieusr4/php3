@@ -1,5 +1,14 @@
 @extends('layout.admin')
 @section('content')
+<style>
+.des{
+    overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+           line-clamp: 1; 
+   -webkit-box-orient: vertical;
+};
+</style>
     <div class="container">
         <div class="row">
             <form action="" style="margin-bottom: 35px; margin-top: 25px; display: flex">
@@ -36,7 +45,7 @@
                             <th scope="row">
                                 <img style="width: 100%" src="{{ $item->img }}" />
                             </th>
-                            <th scope="row">{{ $item->description }}</th>
+                            <th scope="row" class="des">{{ $item->description }}</th>
                             <th scope="row">{{ $item->acreage }}</th>
                             <th scope="row">{{ $item->bedroom }}</th>
                             <th scope="row">{{ $item->status }}</th>

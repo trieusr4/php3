@@ -263,7 +263,7 @@
                 <div class="horizontal-menu d-none d-md-flex d-lg-flex d-xl-flex">
                                
                     <div>
-                        <a href="" class="mdc-button menu-item-has-children">
+                        <a href="/" class="mdc-button menu-item-has-children">
                             <span class="mdc-button__ripple"></span>
                             <span class="mdc-button__label">Dự án</span>
                         </a>
@@ -304,7 +304,7 @@
                     </div>
                     
                     <div>
-                        <a href="" class="mdc-button menu-item-has-children">
+                        <a href="/" class="mdc-button menu-item-has-children">
                             <span class="mdc-button__ripple"></span>
                             <span class="mdc-button__label">Nhà cho thuê</span>
                         </a>
@@ -352,7 +352,7 @@
                         </div>
                     </div>
                     <div >
-                        <a href="" class="mdc-button menu-item-has-children">
+                       <a href="/new" class="mdc-button menu-item-has-children">
                             <span class="mdc-button__ripple"></span>
                             <span class="mdc-button__label">Tin tức</span>
                         </a>
@@ -392,13 +392,13 @@
                                 
                             </div>
                         </div>
-                        <a href="" class="mdc-button menu-item-has-children">
+                        <a href="/" class="mdc-button menu-item-has-children">
                             <span class="mdc-button__ripple"></span>
                             <span class="">Liên Hệ</span>
                         </a>
                     </div>
                     <div >
-                        <a href="" class="mdc-button">
+                        <a href="/" class="mdc-button">
                             <span class="mdc-button__ripple"></span>
                             <span class="mdc-button__label">Bảng tin</span>
                         </a>

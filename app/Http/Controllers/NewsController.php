@@ -6,6 +6,7 @@ use App\Models\NewsModel;
 use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Jorenvh\Share\ShareFacade;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class NewsController extends Controller
@@ -18,8 +19,19 @@ class NewsController extends Controller
     public function detailHome($id)
     {
         $new = NewsModel::find($id);
+        // $shareButtons1 = ShareFacade::page(
+        //     'http://127.0.0.1:8000/home/new-detail/' . $id
+        // )
+        //     ->facebook()
+        //     ->twitter()
+        //     ->linkedin()
+        //     ->telegram()
+        //     ->whatsapp()
+        //     ->reddit();
         $listNew=NewsModel::get();
+
         return view("Home.new-detail", compact('new','listNew'));
+        
     }
 
     public function create()

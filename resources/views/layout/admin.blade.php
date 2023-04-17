@@ -154,7 +154,7 @@
                         <ul class="dropdown-menu">
                             <li>
                                 <p style="padding: 10px;">
-                                    <i class="fa fa-user"></i> Email:<br>
+                                    <i class="fa fa-user"></i> <br>
                                 </p>
                             </li>
                             <li>

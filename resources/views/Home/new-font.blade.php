@@ -45,7 +45,7 @@
                                 <div class="row property-status">
                                     <span class="green">For Sale</span>
                                 </div>
-                                <img src="{{ $item->img }}" alt="" style="max-width: 100%; margin-bottom: 10px;">
+                                <img src="{{ $item->image }}" alt="" style="max-width: 100%; margin-bottom: 10px;">
 
                             </div>
                             <div class="property-content-wrapper">
@@ -56,13 +56,13 @@
 
                                         <div class="row between-xs middle-xs">
                                             <h3 class="primary-color price">
-                                                <span>{{ $item->price }} tỉ</span>
+                                                <span></span>
                                             </h3>
 
                                         </div>
                                         <div class="d-none d-md-flex d-lg-flex d-xl-flex">
                                             <div class="description mt-3">
-                                                <p>{{ $item->description }}</p>
+                                                <p></p>
                                             </div>
                                         </div>
                                        
@@ -73,7 +73,7 @@
                                             <i class="material-icons text-muted">date_range</i>
                                             <span class="mx-2">12 August, 2012</span>
                                         </p> --}}
-                                        <a href="home/product-detail/{{ $item->id }}"
+                                        <a href="home/new-detail/{{ $item->id }}"
                                             class="mdc-button mdc-button--outlined">
                                             <span class="mdc-button__ripple"></span>
                                             <span class="mdc-button__label">Chi tiết</span>
