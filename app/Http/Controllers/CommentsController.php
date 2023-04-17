@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\CommentsModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Mail as FacadesMail;
 use Mail;
 
 class CommentsController extends Controller
